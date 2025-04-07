@@ -1,1 +1,31 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- home -->
+<div class="flex justify-content-center bg-color mx-6 border-round-xl">
+    <div>
+        <img src="assets/img/modelo-png.png" alt="imagen modelo-png">
+    </div>
+    <div class="flex flex-column justify-content-center align-items-center P-2">
+        <div class="flex flex-column align-items-center gap-2 text-6xl">
+            <h2>TRENDY SKIRT</h2>
+            <P>Up to 50% of the top brands</P>
+            <button class="boton_general scale-btn bg-black-alpha-90 text-white text-xl">Shop Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- category cards -->
+<div class="my-2 flex justify-content-around">
+    <app-category-card *ngFor="let category of categories" [title_category]="category.name" [descuento]="category.discount" class="scale-btn" style="cursor: pointer"></app-category-card>
+</div>
+
+<!-- seccion de compras -->
+ <section>
+    <div class="flex justify-content-center my-6">
+        <h1>Catalogo</h1>
+    </div>
+    <div>
+        <app-product-card></app-product-card>
+    </div>
+ </section>

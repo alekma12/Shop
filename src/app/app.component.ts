@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Category } from './interface/category';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop';
+  categories:  Category[] =
+  [
+    { 
+      name: "Zapatos",
+      discount:30
+    },
+    { 
+      name: "Camisas",
+      discount:10
+    },
+    { 
+      name: "Pantalones",
+      discount:5
+    },
+    { 
+      name: "medias",
+      discount:40
+    }
+  ]
 }

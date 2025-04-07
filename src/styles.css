@@ -14,3 +14,23 @@
     transition: 0.4s;
 
 }
+
+.boton_general{
+    padding: 4px 10px;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton_general:hover{
+    background-color: rgb(215, 215, 215);
+    text-align: center;
+    cursor: pointer;
+}
+
+.bg-color{
+    background-color: #dddddd;
+}
