@@ -1,5 +1,6 @@
 import { EmitterVisitorContext } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Product } from 'src/app/components/product-card/product';
 
 @Component({
   selector: 'app-product-card',
@@ -7,11 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent {
-  @Input() product_title: string = "franela 1"
-  @Input() precio_product_card: number = 2
-  @Output() touch_btn_buy: EventEmitter<boolean> = new EventEmitter<boolean>()
-  @Input() id: number = 0
+  @Input() product: Product = new Product();
+  @Output() touch_btn_buy: EventEmitter<Product> = new EventEmitter<Product>()
 
   event_btn_product(){
+    this.touch_btn_buy.emit(this.product)
   }
 }

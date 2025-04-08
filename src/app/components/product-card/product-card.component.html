@@ -1,10 +1,10 @@
 <div class="flex flex-column w-12rem">
     <div>
-        <img src="assets/img/franela.png" alt="" class="w-12rem border-1 bort shadow-3 bg-gray-200 border-400">
+        <img [src]="'assets/img/'+product.url" alt="" class="w-12rem border-1 bort shadow-3 bg-gray-200 border-400">
     </div>
     <div class="flex flex-column align-items-center">
-        <p>{{product_title}}</p>
-        <p>{{precio_product_card+"$"}}</p>
-        <button class="boton_general scale-btn bg-black-alpha-90 text-white text-sm" (click)="touch_btn_buy.emit()">Buy Now</button>
+        <p>{{product.product_name}}</p>
+        <p>{{product.price+"$"}}</p>
+        <button class="boton_general scale-btn bg-black-alpha-90 text-white text-sm" (click)="event_btn_product()">Buy Now</button>
     </div>
 </div>
