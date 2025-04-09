@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     CategoryCardComponent,
     ProductCardComponent,
     ShoppingCartComponent,
+    HomeComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

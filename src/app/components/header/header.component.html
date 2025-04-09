@@ -2,8 +2,8 @@
     <div class="flex text-white justify-content-between p-2  bg-black-alpha-90">
         <p>{{"Shop@Shop.com"}}</p>
         <div class="flex gap-3">
-            <button class="boton_general scale-btn">{{"register"|uppercase}}</button>
-            <button class="boton_general scale-btn">{{"get in"|uppercase}}</button>
+            <button class="boton_general scale-btn" [routerLink]="'/register'   ">{{"register"|uppercase}}</button>
+            <button class="boton_general scale-btn" [routerLink]="'/login'">{{"get in"|uppercase}}</button>
         </div>
     </div>
     <div class="flex justify-content-between align-items-center p-2 shadow-2">
@@ -11,13 +11,14 @@
             <h1>Shop</h1>
         </div>
         <div class="flex  gap-3">
-           <a href="" class="text-xl flipleft animation-duration-1000">Home</a>
-           <a href="" class="text-xl flipleft animation-duration-1000">Category</a>
-           <a href="" class="text-xl flipleft animation-duration-1000">Product</a>
-           <a href="" class="text-xl flipleft animation-duration-1000">Contact</a>
+            <a href="" class="text-xl flipleft animation-duration-1000">Home</a>
+            <a href="" class="text-xl flipleft animation-duration-1000">Category</a>
+            <a href="" class="text-xl flipleft animation-duration-1000">Product</a>
+            <a href="" class="text-xl flipleft animation-duration-1000">Contact</a>
         </div>
         <div>
-            <app-shopping-cart></app-shopping-cart>
+            <app-shopping-cart [Shopping_cart_num]="Products_header_shopping_cart.length"
+                [Products_shopping_cart]="Products_header_shopping_cart"></app-shopping-cart>
         </div>
     </div>
 </div>

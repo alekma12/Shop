@@ -1,4 +1,21 @@
 <div class="mr-4 scale-btn flex">
   <p class="bg-red-500 cart-nmb p-3 flex">{{Shopping_cart_num}}</p>
-  <button class="bi bi-cart px-3 py-1 text-4xl btn-cart bg-black-alpha-90"></button>
+  <button class="bi bi-cart px-3 py-1 text-4xl btn-cart bg-black-alpha-90" (click)="openModal(modal)"></button>
 </div>
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Listado de productos</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cerrar')"></button>
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let product of Products_shopping_cart">
+      <h1>{{product.product_name}}</h1>
+      <p>{{"precio "+product.price+" $"}}</p>
+      <p>{{"cantidad: "+product.cantidad}}</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-secondary" (click)="modal.close('Cerrar')">Cerrar</button>
+  </div>
+</ng-template>

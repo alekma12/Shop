@@ -1,14 +1,14 @@
-import { Component, Input } from '@angular/core';
-import { Category } from './interface/category';
-import { Product } from './components/product-card/product';
+import { Component } from '@angular/core';
+import { Product } from '../product-card/product';
+import { Category } from 'src/app/interface/category';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
-  title = 'shop';
+export class HomeComponent {
+title = 'shop';
 
   /**
    * Esta propiedad es de tipo Product y sirve para pasarle una lista de objetos luego de que el boton buy now sea precionado
@@ -110,5 +110,5 @@ export class AppComponent {
     }
     console.log(this.products_for_shopping_cart)
   }
-}
 
+}
